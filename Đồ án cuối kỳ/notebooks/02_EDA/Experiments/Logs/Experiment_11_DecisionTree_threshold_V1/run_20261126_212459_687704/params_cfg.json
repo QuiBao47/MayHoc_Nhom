@@ -1,0 +1,40 @@
+{
+  "ccp_alpha": 0.0,
+  "class_weight": "balanced",
+  "criterion": "gini",
+  "max_depth": 8,
+  "max_features": null,
+  "max_leaf_nodes": null,
+  "min_impurity_decrease": 0.0,
+  "min_samples_leaf": 10,
+  "min_samples_split": 20,
+  "min_weight_fraction_leaf": 0.0,
+  "monotonic_cst": null,
+  "random_state": 42,
+  "splitter": "best",
+  "experiment": "EXP-11 Decision Tree Threshold V1",
+  "selected_threshold": 0.6,
+  "threshold_selection_metric": "F1-score",
+  "threshold_candidates": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6
+  ],
+  "oof_f1_at_selected_threshold": 0.4837165869032333,
+  "cross_validation": {
+    "method": "StratifiedKFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "preprocessing_note": "V1 sử dụng preprocessor đã fit trên toàn bộ tập train trước khi chạy CV; đây là phiên bản cơ bản, sẽ được cải thiện trong V2."
+}

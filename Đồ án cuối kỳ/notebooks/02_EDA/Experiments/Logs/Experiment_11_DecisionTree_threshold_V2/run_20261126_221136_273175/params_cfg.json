@@ -1,0 +1,47 @@
+{
+  "experiment": "EXP-11 Decision Tree Threshold V2",
+  "model": "DecisionTreeClassifier",
+  "model_parameters": {
+    "ccp_alpha": 0.0,
+    "class_weight": "balanced",
+    "criterion": "gini",
+    "max_depth": 8,
+    "max_features": null,
+    "max_leaf_nodes": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 10,
+    "min_samples_split": 20,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "random_state": 42,
+    "splitter": "best"
+  },
+  "selected_threshold": 0.645072002648372,
+  "threshold_selection_metric": "OOF F1-score",
+  "threshold_selection_method": "All unique thresholds from precision_recall_curve",
+  "oof_precision_at_selected_threshold": 0.4338094222980175,
+  "oof_recall_at_selected_threshold": 0.548369711668014,
+  "oof_f1_at_selected_threshold": 0.48440847417281596,
+  "cross_validation": {
+    "method": "StratifiedKFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42
+  },
+  "train_test_split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratify": true
+  },
+  "preprocessing": {
+    "numeric": [
+      "SimpleImputer(median)",
+      "StandardScaler"
+    ],
+    "categorical": [
+      "SimpleImputer(most_frequent)",
+      "OneHotEncoder(handle_unknown=ignore)"
+    ],
+    "inside_cross_validation_pipeline": true
+  }
+}
