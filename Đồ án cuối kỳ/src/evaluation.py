@@ -14,12 +14,18 @@ from sklearn.metrics import (
 )
 
 
+try:
+    from src.config import EXPERIMENTS_DIR
+except ModuleNotFoundError:
+    from config import EXPERIMENTS_DIR
+
+
 def evaluate_model(
     model_name,
     y_true,
     y_pred,
     y_prob=None,
-    save_dir="../results",
+    save_dir=EXPERIMENTS_DIR,
     show_plot=True,
 ):
     """

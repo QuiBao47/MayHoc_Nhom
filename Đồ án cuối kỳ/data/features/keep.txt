@@ -1,0 +1,30 @@
+﻿# Danh sach features dung trong model Bank Marketing
+# Cap nhat boi: nhom MayHoc
+# Ngay: 26/11/2026
+
+# --- Numeric features ---
+age
+campaign
+pdays
+previous
+emp.var.rate
+cons.price.idx
+cons.conf.idx
+euribor3m
+nr.employed
+
+# --- Categorical features (se duoc One-Hot Encoded) ---
+job
+marital
+education
+default
+housing
+loan
+contact
+month
+day_of_week
+poutcome
+
+# --- Luu y ---
+# 'duration' bi loai bo vi gay data leakage
+# 'y' la bien muc tieu (target)

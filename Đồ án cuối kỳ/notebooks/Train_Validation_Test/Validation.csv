@@ -1,0 +1,4 @@
+﻿# Validation set - hien chua duoc tach rieng
+# Hien tai du lieu duoc chia: 80% train / 20% test (khong co validation set rieng)
+# De co Validation set, can chia lai: 70% train / 15% val / 15% test
+# Tham khao notebooks/03_Baseline/Baseline.ipynb de tach lai neu can

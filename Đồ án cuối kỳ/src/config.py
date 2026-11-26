@@ -5,9 +5,10 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 # Đường dẫn dữ liệu
-RAW_DATA_PATH = ROOT_DIR / "data" / "raw" / "bank-additional-full.csv"
-PROCESSED_DATA_DIR = ROOT_DIR / "data" / "processed"
-RESULTS_DIR = ROOT_DIR / "results"
+RAW_DATA_PATH = ROOT_DIR / "DATA" / "raw" / "bank-additional-full.csv"
+PROCESSED_DATA_DIR = ROOT_DIR / "DATA" / "processed"
+RESULTS_DIR = ROOT_DIR / "notebooks" / "02_EDA" / "Experiments" / "Logs"
+EXPERIMENTS_DIR = RESULTS_DIR  # alias để tương thích với evaluation.py
 
 # Tham số chia dữ liệu và huấn luyện cố định cho cả nhóm
 RANDOM_STATE = 42

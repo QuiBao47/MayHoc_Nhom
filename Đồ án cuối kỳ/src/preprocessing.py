@@ -1,4 +1,4 @@
-# File: src/preprocessing.py
+﻿# File: src/preprocessing.py
 import os
 import pandas as pd
 from sklearn.compose import ColumnTransformer
@@ -9,26 +9,26 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
 def load_and_preprocess_data(
-    filepath="../data/raw/bank-additional-full.csv",
-    save_dir="../data/processed",
+    filepath="../DATA/raw/bank-additional-full.csv",
+    save_dir="../DATA/processed",
 ):
-    # 1. Đọc và làm sạch cơ bản
+    # 1. Äá»c vÃ  lÃ m sáº¡ch cÆ¡ báº£n
     df = pd.read_csv(filepath, sep=";")
     df_model = df.drop_duplicates().dropna(subset=["y"]).copy()
 
-    # 2. Tách X, y (loại duration để tránh data leakage)
+    # 2. TÃ¡ch X, y (loáº¡i duration Ä‘á»ƒ trÃ¡nh data leakage)
     X = df_model.drop(columns=["y", "duration"])
     y = df_model["y"].map({"no": 0, "yes": 1})
 
     numeric_features = X.select_dtypes(include="number").columns.tolist()
     categorical_features = X.select_dtypes(exclude="number").columns.tolist()
 
-    # 3. Chia train/test cố định random_state=42
+    # 3. Chia train/test cá»‘ Ä‘á»‹nh random_state=42
     X_train_raw, X_test_raw, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42, stratify=y
     )
 
-    # 4. Pipeline biến đổi dữ liệu
+    # 4. Pipeline biáº¿n Ä‘á»•i dá»¯ liá»‡u
     numeric_pipeline = Pipeline(
         steps=[
             ("imputer", SimpleImputer(strategy="median")),
@@ -55,11 +55,11 @@ def load_and_preprocess_data(
     X_train = preprocessor.fit_transform(X_train_raw)
     X_test = preprocessor.transform(X_test_raw)
 
-    # Tự động tạo thư mục data/processed nếu chưa có và lưu file cố định
+    # Tá»± Ä‘á»™ng táº¡o thÆ° má»¥c data/processed náº¿u chÆ°a cÃ³ vÃ  lÆ°u file cá»‘ Ä‘á»‹nh
     os.makedirs(save_dir, exist_ok=True)
     feature_names = preprocessor.get_feature_names_out()
 
-    # Lưu tập đã scale/encode
+    # LÆ°u táº­p Ä‘Ã£ scale/encode
     pd.DataFrame(X_train, columns=feature_names).to_csv(
         f"{save_dir}/X_train.csv", index=False
     )
@@ -69,7 +69,7 @@ def load_and_preprocess_data(
     y_train.to_csv(f"{save_dir}/y_train.csv", index=False)
     y_test.to_csv(f"{save_dir}/y_test.csv", index=False)
 
-    # Lưu thêm tập raw đã chia train/test (để dùng cho SkPipeline + SMOTE tránh data leakage)
+    # LÆ°u thÃªm táº­p raw Ä‘Ã£ chia train/test (Ä‘á»ƒ dÃ¹ng cho SkPipeline + SMOTE trÃ¡nh data leakage)
     X_train_raw.to_csv(f"{save_dir}/X_train_raw.csv", index=False)
     X_test_raw.to_csv(f"{save_dir}/X_test_raw.csv", index=False)
 
@@ -86,7 +86,7 @@ def load_and_preprocess_data(
 
 if __name__ == "__main__":
     load_and_preprocess_data(
-        filepath="data/raw/bank-additional-full.csv",
-        save_dir="data/processed",
+        filepath="DATA/raw/bank-additional-full.csv",
+        save_dir="DATA/processed",
     )
-    print("Đã tiền xử lý và lưu dữ liệu sạch vào data/processed/ thành công!")
+    print("ÄÃ£ tiá»n xá»­ lÃ½ vÃ  lÆ°u dá»¯ liá»‡u sáº¡ch vÃ o data/processed/ thÃ nh cÃ´ng!")
