@@ -1,0 +1,6 @@
+{
+  "n_neighbors": 5,
+  "weights": "uniform",
+  "metric": "euclidean",
+  "threshold": 0.4
+}
