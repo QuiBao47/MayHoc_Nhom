@@ -1,10 +1,7 @@
 {
-  "algorithm": "auto",
-  "leaf_size": 30,
-  "metric": "euclidean",
-  "metric_params": null,
-  "n_jobs": null,
   "n_neighbors": 5,
-  "p": 2,
-  "weights": "uniform"
+  "weights": "uniform",
+  "metric": "euclidean",
+  "sampling": "SMOTE",
+  "random_state": 42
 }
