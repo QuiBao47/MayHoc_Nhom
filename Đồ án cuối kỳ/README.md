@@ -46,12 +46,12 @@ otebooks/03_Baseline/Baseline.ipynb trong Jupyter.
 
 ## Thành Viên Nhóm
 
-| Thành viên       | Phụ trách                                      |
-| ---------------- | ---------------------------------------------- |
-| Nguyễn Hoàng Anh | Logistic Regression (EXP-01)                   |
-| Tía Quang Minh   | KNN (EXP-02, EXP-06)                           |
-| Đào Thiện Phát   | Decision Tree (EXP-03)                         |
-| Huỳnh Quí Bảo    | Random Forest (EXP-04, EXP-08, EXP-12, EXP-16) |
+| Thành viên       | Phụ trách                                                              |
+| ---------------- | ---------------------------------------------------------------------- |
+| Nguyễn Hoàng Anh | Logistic Regression (EXP-01)                                           |
+| Tía Quang Minh   | KNN (EXP-02, EXP-06)                                                   |
+| Đào Thiện Phát   | Decision Tree (EXP-03)                                                 |
+| Huỳnh Quí Bảo    | Random Forest (EXP-04, EXP-08, EXP-12, EXP-16, EXP-17, EXP-18, EXP-19) |
 
 ## Kết Quả
 
