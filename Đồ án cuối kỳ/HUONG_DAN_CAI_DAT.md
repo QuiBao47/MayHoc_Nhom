@@ -73,6 +73,10 @@ Trong mỗi notebook, chọn kernel Python thuộc môi trường `.venv`, sau �
 - **Notebook dùng sai kernel:** trong Jupyter chọn kernel Python từ thư mục `.venv` của dự án.
 - **Lỗi `sparse_output` của scikit-learn:** kiểm tra phiên bản bằng `python -m pip show scikit-learn`; cần phiên bản 1.2 trở lên.
 
+## 8. Link Google Drive lưu đồ án và nhật ký
+
+- https://drive.google.com/drive/folders/1VVYBK3mPJpUxR98ZALPnBCi8JvqWJ0Fw?usp=sharing
+
 Khi hoàn tất, thoát môi trường ảo bằng:
 
 ```powershell
