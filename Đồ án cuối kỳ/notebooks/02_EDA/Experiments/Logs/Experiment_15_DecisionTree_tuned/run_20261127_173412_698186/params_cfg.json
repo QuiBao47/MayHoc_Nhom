@@ -1,0 +1,60 @@
+{
+  "experiment": "EXP-15 Decision Tree Hyperparameter Tuning",
+  "model": "DecisionTreeClassifier",
+  "fixed_parameters": {
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "param_grid": {
+    "classifier__max_depth": [
+      4,
+      8,
+      12
+    ],
+    "classifier__min_samples_split": [
+      20,
+      40
+    ],
+    "classifier__min_samples_leaf": [
+      5,
+      10
+    ]
+  },
+  "best_params": {
+    "max_depth": 4,
+    "min_samples_leaf": 5,
+    "min_samples_split": 20
+  },
+  "best_cv_f1": 0.46331687031088065,
+  "cross_validation": {
+    "method": "StratifiedKFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "scoring": [
+      "f1",
+      "precision",
+      "recall",
+      "roc_auc"
+    ],
+    "refit": "f1"
+  },
+  "train_test_split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratify": true
+  },
+  "preprocessing": {
+    "numeric": [
+      "SimpleImputer(median)",
+      "StandardScaler"
+    ],
+    "categorical": [
+      "SimpleImputer(most_frequent)",
+      "OneHotEncoder(handle_unknown=ignore)"
+    ],
+    "inside_cross_validation_pipeline": true
+  },
+  "threshold": 0.5,
+  "elapsed_seconds": 20.721037200069986
+}
